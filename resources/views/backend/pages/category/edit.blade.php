@@ -26,7 +26,7 @@
                 <label for="exampleInputName2" class="form-label">Status</label>
                 <select class="form-control" name="status" id="">
                     <option value="1">Active</option>
-                    <option value="0">Inactive</option>
+                    <option value="0">Inactive</option>                  
                 </select>
                 @error('status')
                     <strong class="text-danger">{{ $message }}</strong>

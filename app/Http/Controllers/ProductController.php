@@ -96,31 +96,12 @@ class ProductController extends Controller
         public function productupdate( Request $request ,$id){
 
 
-           // dd($request->all());
-        $validator = Validator::make($request->all(), [
-            'name'                  => 'required',
-            'category_id'           => 'required',
-            'image'                 => 'nullable|max:200',
-            'weight'                => 'required',
-            'stock'                 => 'required|integer',
-            'price'                 => 'required',
-            'time'                  => 'required',
-            'description'           => 'required',
-            'product_information'   => 'required',
-            'status'                => 'required',
-        ]);
-
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
-
         $images=null;
         if ($request->hasFile('image')) {
             $images=date('Ymdhsis').'.'.$request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('uploads', $images, 'public');
         }
-            //dd($imageName);
-            //dd($request->all());
+          
 
             $update=Product::find($id);
 
