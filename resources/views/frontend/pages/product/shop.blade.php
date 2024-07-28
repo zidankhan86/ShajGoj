@@ -157,10 +157,15 @@
                                         @endfor
                                     </div>
         
-        
-                                 
+                                    @if (empty($item->discount))
                                     <h5 style="color: rgb(214, 57, 17)">{{ $item->price }} Tk.</h5>
+                                @else
+                                <del style="color: rgb(214, 57, 17)">{{ $item->price }} Tk.</del>
+                                    <h5 style="color: rgb(214, 57, 17)">{{ $item->discount }} Tk.</h5>
+                                    
+                                @endif                    
                                    
+                                    
                                 </div>
 
                                 <br>
