@@ -4,8 +4,8 @@
     <div class="container">
         <div class="container">
             <div class="container">
-                <br><a class="btn btn-success float-end ml-2" href="{{ route('logo.form') }}"><i class="fa fa-plus"
-                        aria-hidden="true"></i> Add Logo</a>
+                <br><a class="btn btn-info float-end ml-2" href="{{ route('logo.form') }}"><i class="fa fa-plus"
+                        aria-hidden="true"></i> Create Logo</a>
                 <br>
                 <h4 class="text-success text-center">Logo List</h4><br>
 

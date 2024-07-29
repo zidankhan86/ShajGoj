@@ -5,7 +5,7 @@
 <div class="container">
 <div class="container">
 
-<br><a class="btn btn-success float-end ml-2" href="{{ route('banner.form.one') }}"><i class="fa fa-plus" aria-hidden="true"></i> Banner(Top)</a>
+<br><a class="btn btn-info float-end ml-2" href="{{ route('banner.form.one') }}"><i class="fa fa-plus" aria-hidden="true"></i>Create Banner(Top)</a>
  <br><h4 class="text-success text-center">Banner List</h4><br>
 
 

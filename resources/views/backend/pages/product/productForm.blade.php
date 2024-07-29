@@ -144,7 +144,7 @@
                 </div>
 
                 <div class="text-center mt-3">
-                    <button type="submit" class="btn btn-success">+ Add Category</button>
+                    <button type="submit" class="btn btn-info">+ Add</button>
                 </div>
             </form>
         </div>

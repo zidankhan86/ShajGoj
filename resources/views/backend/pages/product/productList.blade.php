@@ -5,7 +5,7 @@
   <br><div class="card mb-4">
             <div class="card-header"> 
                 <i class="fas fa-table me-1"></i>
-                    <a class="btn btn-success float-end ml-2" href="{{ route('product.form') }}"><i class="fa-solid fa-plus"></i> Add Product</a>
+                    <a class="btn btn-info float-end ml-2" href="{{ route('product.form') }}"><i class="fa-solid fa-plus"></i> Create Product</a>
                         Product Table
                         </div>
                             <div class="card-body">

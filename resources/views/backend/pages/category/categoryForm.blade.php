@@ -33,7 +33,7 @@
             </div>
 
                 <br><div class="text-center">
-                <button type="submit" class="btn btn-success">+Add Category</button>
+                <button type="submit" class="btn btn-info">+ Add</button>
             </div>
         </form>
     </div>

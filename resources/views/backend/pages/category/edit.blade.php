@@ -34,7 +34,7 @@
             </div>
 
                 <br><div class="text-center">
-                <button type="submit" class="btn btn-success">Create Category</button>
+                <button type="submit" class="btn btn-info">Edit Category</button>
             </div>
         </form>
     </div>
