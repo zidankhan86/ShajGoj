@@ -17,23 +17,13 @@
           </div>
           <div class="col-xl-3 float-end">
 
-            {{-- <button class="btn btn-light text-capitalize border-0 no-print" data-mdb-ripple-color="dark" onclick="printInvoice()">
-                <i class="fas fa-print text-primary"></i> Print
-            </button> --}}
-
-
-            {{-- <a class="btn btn-light text-capitalize" data-mdb-ripple-color="dark"><i
-                class="far fa-file-pdf text-danger"></i> Export</a> --}}
           </div>
           <hr>
         </div>
 
         <div class="container">
           <div class="col-md-12">
-            <div class="text-center">
-
-              <p class="pt-0">nongorfood.com</p>
-            </div>
+         
 
           </div>
 
@@ -56,7 +46,7 @@
                     class="fw-bold">Order Date: </span>{{$invoice->updated_at}}</li>
                 <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
                     class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold">
-                    Paid</span></li>
+                    {{ $invoice->status }}</span></li>
               </ul>
             </div>
           </div>
