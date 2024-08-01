@@ -32,15 +32,20 @@ class SslCommerzPaymentController extends Controller
 
         $product = Product::find($id);
 
-        if ($product->stock > 0) {
-            $product->stock--;
-            $product->save();
-        }else {
-          
-          
-            notify()->error('Out of stock');
-            return redirect()->back();
+        $cart = session()->get('cart', []);
+
+        foreach ($cart as $productId => $cartItem) {
+            $product = Product::find($id);
     
+            if ($product) {
+                if ($product->stock >= $cartItem['quantity']) {
+                    $product->stock -= $cartItem['quantity'];
+                    $product->save();
+                } else {
+                    notify()->error("Product {$product->name} is out of stock");
+                    return redirect()->back();
+                }
+            }
         }
         
         $productNames = implode(', ', $request->input('product_names', []));
