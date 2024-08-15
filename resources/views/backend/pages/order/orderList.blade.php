@@ -21,6 +21,7 @@
             
             <th scope="col">Discount</th>
             <th scope="col">Invoice</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -42,6 +43,12 @@
            
             <td>
                 <a href="{{route('order.invoice' ,$item->id)}}" class="btn btn-info"><i class="fas fa-file-invoice"></i></a>
+            </td>
+            <td>
+                <a href="{{route('confirm' ,$item->id)}}"><b>Confirm</b></a>
+            </td>
+            <td>
+                <a href="{{route('reject' ,$item->id)}}"><b>Reject</b></a>
             </td>
         </tr>
         @endforeach

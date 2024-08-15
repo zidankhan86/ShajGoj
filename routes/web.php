@@ -10,6 +10,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\StatusController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
@@ -132,6 +133,8 @@ Route::controller(ProductController::class)->group(function(){
     Route::get('/trending/status/{id}','trendingStatus')->name('trending.status');
 });
 
+Route::get('/order-confirm/{id}', [StatusController::class, 'confirm'])->name('confirm');
+Route::get('/order-cancel/{id}', [StatusController::class, 'cancel'])->name('reject');
 //Banner
 Route::controller(BannerController::class)->group(function(){
     Route::get('/banner-form-one','bannerFormOne')->name('banner.form.one');
