@@ -161,7 +161,7 @@
                                     <h5 style="color: rgb(214, 57, 17)">{{ $item->price }} Tk.</h5>
                                 @else
                                 <del style="color: rgb(214, 57, 17)">{{ $item->price }} Tk.</del>
-                                    <h5 style="color: rgb(214, 57, 17)">{{ $item->discount }} Tk.</h5>
+                                    <h5 style="color: rgb(214, 57, 17)">{{ $item->discounted_price }} Tk.</h5>
                                     
                                 @endif                    
                                    

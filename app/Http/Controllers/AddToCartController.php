@@ -23,6 +23,7 @@ class AddToCartController extends Controller
                 //add to cart- first product
                     $myCart[$id]=[
                       'name'=>$product->name,
+                      'discounted_price'=>$product->discounted_price,
                       'price'=>$product->price,
                       'quantity'=>1,
                       'subtotal'=>$product->price,//price x quantity
@@ -44,6 +45,7 @@ class AddToCartController extends Controller
                     'price'=>$product->price,
                     'quantity'=>1,
                     'subtotal'=>$product->price,//price x quantity
+                    'discounted_price'=>$product->discounted_price,
                 ];
 
                 session()->put('cart',$cart);

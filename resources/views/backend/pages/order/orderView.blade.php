@@ -60,6 +60,7 @@
                   {{-- <th scope="col">Qty</th> --}}
                   <th scope="col">Unit Price</th>
                   <th scope="col">Amount</th>
+                 
                 </tr>
               </thead>
               <tbody>
@@ -69,6 +70,7 @@
                   {{-- <td>4</td> --}}
                   <td>{{$invoice->total_price}} Tk.</td>
                   <td>{{$invoice->total_price}} Tk.</td>
+         
                 </tr>
 
 
@@ -88,6 +90,10 @@
               </ul>
               <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
                   style="font-size: 25px;">{{$invoice->total_price}} Tk.</span></p>
+
+                  <p class="text-black float-start"><span class="text-black me-3"> Discount</span><span
+                    style="font-size: 25px;">{{ round($invoice->product->discounted_price) }}
+                    .00 Tk.</span></p>
             </div>
           </div>
           <hr>

@@ -10,6 +10,7 @@
                             <tr>
                                 <th class="shoping__product">Products</th>
                                 <th>Price</th>
+                                <th>Discount</th>
                                 <th>Quantity</th>
                                 <th>Total</th>
                                 <th></th>
@@ -22,7 +23,10 @@
                             @foreach(session()->get('cart') as $key => $data)
                             @php
                             $subtotal += $data['subtotal'];
+                        
                             @endphp
+
+                          
                             <tr>
                                 <td class="shoping__cart__item">
                                     <img src="img/cart/cart-1.jpg" alt="">
@@ -30,6 +34,9 @@
                                 </td>
                                 <td class="shoping__cart__price">
                                     {{$data['price']}} Tk.
+                                </td>
+                                <td class="shoping__cart__price">
+                                    {{$data['discounted_price']*$data['quantity']}} Tk.
                                 </td>
                                 <td class="shoping__cart__quantity">
                                     <div class="quantity">
@@ -68,6 +75,9 @@
                     <ul>
                         <li>Subtotal <span id="subtotal">{{$subtotal}} Tk.</span></li>
                         <li>Total <span id="total">{{$subtotal}} Tk.</span></li>
+                        <li>Discount <span id="total"> {{$data['discounted_price']*$data['quantity']}} Tk.</span></li>
+                       
+                        
                     </ul>
                     <a href="{{ url('/product-checkout', $key) }}" class="primary-btn">PROCEED TO CHECKOUT</a>
                 </div>
