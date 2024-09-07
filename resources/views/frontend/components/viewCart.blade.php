@@ -40,9 +40,21 @@
                                 </td>
                                 <td class="shoping__cart__quantity">
                                     <div class="quantity">
-                                        <div class="form-control">
-                                            <input type="readonly" value="{{$data['quantity']}}" readonly>
-                                        </div>
+                                        
+                                            <form action="{{ route('cart.update.quantity', $key) }}" method="POST" style="display: flex; align-items: center;">
+                                                @csrf
+                                                <input
+                                                  type="number"
+                                               
+                                                  name="quantity"
+                                                  min="1"
+                                                  max="1000"
+                                                  value="{{ $data['quantity'] }}"
+                                                
+                                                />
+                                                <button type="submit" class="btn btn-black">Update</button>
+                                              </form>
+                                       
                                     </div>
                                 </td>
                                 <td class="shoping__cart__total">

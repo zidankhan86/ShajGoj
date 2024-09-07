@@ -31,7 +31,7 @@
                         
                         <ul>
                             @if ($details->stock != 0)
-                            <li><b>Availability</b><span>In Stock</span></li> 
+                            <li><b>Availability</b><span>{{ $details->stock }}</span></li> 
                             @else
                             <li><b>Availability</b><span>Out Of Stock</span></li> 
                             @endif

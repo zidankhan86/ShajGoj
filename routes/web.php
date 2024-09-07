@@ -85,6 +85,7 @@ Route::controller(AddToCartController::class)->group(function(){
     Route::get('/view-cart','viewCart');
     Route::get('/clear-cart','clearCart')->name('cart.clear');
     Route::get('/cart-item/delete/{id}','cartItemDelete')->name('cart.item.delete');
+    Route::post('/cart-item/update-quantity/{id}','updateCartQuantity')->name('cart.update.quantity');
     });
     //Wishlist
  Route::controller(WishlistController::class)->group(function(){
