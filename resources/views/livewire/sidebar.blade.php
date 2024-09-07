@@ -31,6 +31,12 @@
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-cart-plus"></i></div>
                         Orders
                     </a>
+
+                    <a class="nav-link" href="{{ route('users') }}">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-cart-plus"></i></div>
+                        Users
+                    </a>
+
                     <a class="nav-link" href="{{ route('logo.list') }}">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-ribbon"></i></div>
                         Logo
@@ -54,7 +60,7 @@
                         data-bs-parent="#sidenavAccordion">
 
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="{{ route('hero.list') }}">Website Banner</a>
+                            <a class="nav-link" href="{{ route('hero.list') }}">Advertising Banner</a>
                         </nav>
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="{{ route('banner.list.one') }}">Advertising Poster 1</a>

@@ -1,32 +1,34 @@
 <?php
 
-use App\Models\Product;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ShopController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\BannerController;
-use App\Http\Controllers\ReportController;
-use App\Http\Controllers\SearchController;
-use App\Http\Controllers\StatusController;
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\AddToCartController;
-use App\Http\Controllers\HeroBannerController;
-use App\Http\Controllers\CompanyLogoController;
-use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\SslCommerzPaymentController;
-use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\SocialShareButtonsController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CompanyLogoController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
+use App\Http\Controllers\HeroBannerController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\SocialShareButtonsController;
+use App\Http\Controllers\SslCommerzPaymentController;
+use App\Http\Controllers\StatusController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\WishlistController;
+use App\Models\Product;
+use Illuminate\Support\Facades\Route;
+
 
 
 //========Routes=======//
@@ -102,8 +104,7 @@ Route::post('/product-order/{id}',[FrontendProductController::class,'order'])->n
 
 //middleware auth and admin
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
-//Notification
-Route::get('/admin/notifications', [NotificationController::class, 'notifications'])->name('admin.notifications');
+    Route::get('/users', [UserController::class, 'users'])->name('users');
 
 //Category
 Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
