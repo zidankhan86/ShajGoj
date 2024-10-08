@@ -84,7 +84,7 @@
                     <ul>
                         <li class="active"><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ url('/product') }}">Products</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="{{ route('about') }}">About</a></li>
                         <li><a href="{{ url('/contact') }}">Contact</a></li>
                     </ul>
                 </nav>

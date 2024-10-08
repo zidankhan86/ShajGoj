@@ -1,38 +1,39 @@
 <?php
 
-use App\Http\Controllers\AddToCartController;
-use App\Http\Controllers\Auth\ForgotPasswordController;
-use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\BannerController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\CompanyLogoController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
-use App\Http\Controllers\frontend\ProductController as FrontendProductController;
-use App\Http\Controllers\HeroBannerController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ReportController;
-use App\Http\Controllers\SearchController;
-use App\Http\Controllers\ShopController;
-use App\Http\Controllers\SocialShareButtonsController;
-use App\Http\Controllers\SslCommerzPaymentController;
-use App\Http\Controllers\StatusController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\WishlistController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\StatusController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\AddToCartController;
+use App\Http\Controllers\HeroBannerController;
+use App\Http\Controllers\CompanyLogoController;
+use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\SslCommerzPaymentController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\SocialShareButtonsController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
+use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 
 
 
 //========Routes=======//
-
+Route::get('/about',[AboutController::class,'about'])->name('about');
 Route::get('/',[FrontendHomeController::class,'home'])->name('home');
 //hero
 Route::get('/hero',[HeroBannerController::class,'hero']);
@@ -44,7 +45,7 @@ Route::get('/search',[SearchController::class,'search'])->name('user.search');
 //CategoryWiseProduct
 Route::get('/category/{id}',[FrontendHomeController::class,'categoryWiseProduct']);
 //ContactUs
-Route::get('/contact',[ContactController::class,'contact']);
+Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 Route::post('/contact-form',[ContactController::class,'contactForm'])->name('contact.form.store');
 //login
 Route::get('/login-frontend', [LoginController::class, 'showLoginFormFrontend'])->name('login.frontend');
