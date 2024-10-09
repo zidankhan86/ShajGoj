@@ -7,7 +7,7 @@
 </head>
 <body>
     <div style="max-width: 400px; margin: 0 auto; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
-        <img src="https://via.placeholder.com/150" alt="{{ auth()->user()->name }}'s Profile Picture" style="border-radius: 50%; width: 150px; height: 150px; border: 5px solid #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+       
         <h2 style="margin: 10px 0;">{{ auth()->user()->name }}</h2>
         <p style="color: #777;">Joined: {{ auth()->user()->created_at->diffForHumans() }}</p>
 
@@ -44,10 +44,8 @@
                                   <th scope="col">Order ID</th>
                                   <th scope="col">Pay</th>
                                   <th scope="col">Placed On</th>
-                                  <th scope="col">Transaction No</th>
-                                  <th scope="col">Order Status</th>
-                                  <th scope="col">Action</th>
-                                  <th scope="col">Invoice</th>
+                        
+ 
                               </tr>
                           </thead>
                           <tbody>
@@ -59,19 +57,12 @@
                               @foreach ($order as $index => $item)
                               <tr>
                                   <th scope="row">{{ $index + 1 }}</th>
-                                  <td>{{ $item->first_name }}</td>
+                                  <td>{{ $item->name }}</td>
                                   <td>#{{ $item->total_price }}{{ $item->id }}67890</td>
                                   <td>BDT {{ $item->total_price }}</td>
                                   <td>{{ $item->created_at }}</td>
                                  
-                                  <td>{{ $item->status }}</td>
-                                  <td>
-                                      {{-- @if($item->status == 'Pending')
-                                      <a href="{{ route('cancel.hotel', $item->id) }}" class="btn btn-danger">Cancel Booking</a>
-                                      @elseif($item->status == 'Canceled')
-                                      <button class="genric-btn danger circle" style="color: rgb(223, 13, 48);">Booking Canceled</button>
-                                      @endif --}}
-                                  </td>
+                                 
                                   
                               </tr>
                               @endforeach
