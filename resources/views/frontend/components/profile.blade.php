@@ -26,7 +26,7 @@
                 <strong>Email: </strong>{{ auth()->user()->email }}<br>
 
             </li>
-            {{-- <button type="submit" style="background-color: #ff5733; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Logout</button> --}}
+           
              </form>
                         </ul><br><br>
                     </div><br><br>
@@ -44,7 +44,7 @@
                                   <th scope="col">Order ID</th>
                                   <th scope="col">Pay</th>
                                   <th scope="col">Placed On</th>
-                        
+                                  <th scope="col">Status</th>
  
                               </tr>
                           </thead>
@@ -61,7 +61,7 @@
                                   <td>#{{ $item->total_price }}{{ $item->id }}67890</td>
                                   <td>BDT {{ $item->total_price }}</td>
                                   <td>{{ $item->created_at }}</td>
-                                 
+                                  <td>{{ $item->status }}</td>
                                  
                                   
                               </tr>
